@@ -14,7 +14,8 @@ module.exports = {
     alias: {
       location: 'app/api/location.js',
       weatherMap: 'app/api/weatherMap.js',
-      Weather: 'app/api/Weather.js',
+      Weather: 'app/components/Weather.js',
+      WeatherInfo: 'app/components/WeatherInfo.js',
     },
     extentions: ['', '.js', '.jsx']
   },
