@@ -12,13 +12,13 @@ class Weather extends React.Component {
     };
   }
 
-  render() {
+  componentDidMount() {
     getLocation()
       .then((data)=> {
         var location = data.geobytescity;
         if(location) {
-          getWeather(location)
-            .then((data) =>{
+          this.serverReq = getWeather(location)
+            .then((data) => {
               this.setState({
                 city: data.name,
                 desc: data.weather[0].main,
@@ -34,6 +34,13 @@ class Weather extends React.Component {
           console.log('belum ada');
         }
       });
+  }
+
+  componentWillUnmount() {
+    this.serverReq.abort();
+  }
+
+  render() {
     var { city, desc, isLoading, icon, temp } = this.state;
     const WeatherLoading = () => {
       if (isLoading) {
