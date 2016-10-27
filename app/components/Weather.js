@@ -2,11 +2,14 @@ import React from 'react';
 import WeatherInfo from 'WeatherInfo';
 import { getLocation } from 'location';
 import { getWeather } from 'weatherMap';
+import LazyLoading from 'LazyLoading';
 
 class Weather extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      isLoading: true,
+    };
   }
 
   render() {
@@ -21,6 +24,7 @@ class Weather extends React.Component {
                 desc: data.weather[0].main,
                 icon: data.weather[0].icon,
                 temp: data.main.temp,
+                isLoading: false,
               });
             },
             (error) => {
@@ -30,10 +34,19 @@ class Weather extends React.Component {
           console.log('belum ada');
         }
       });
-    var { city, desc, icon, temp } = this.state;
+    var { city, desc, isLoading, icon, temp } = this.state;
+    const WeatherLoading = () => {
+      if (isLoading) {
+        return <LazyLoading />
+      } else if (city && temp) {
+        return <WeatherInfo city={city} temp={temp} />
+      }
+    }
 
     return (
-      <WeatherInfo city={city} temp={temp} />
+      <div>
+        {WeatherLoading()}
+      </div>
     );
   }
 }

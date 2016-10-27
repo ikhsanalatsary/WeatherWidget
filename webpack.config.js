@@ -13,6 +13,7 @@ module.exports = {
     root: __dirname,
     alias: {
       location: 'app/api/location.js',
+      LazyLoading: 'app/components/LazyLoading.js',
       weatherMap: 'app/api/weatherMap.js',
       Weather: 'app/components/Weather.js',
       WeatherInfo: 'app/components/WeatherInfo.js',
