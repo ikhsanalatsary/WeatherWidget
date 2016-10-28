@@ -26,14 +26,10 @@ class Weather extends React.Component {
                 temp: data.main.temp,
                 isLoading: false,
               });
-            },
-            (error) => {
-              console.error(error);
-            });
-        } else {
-          console.log('belum ada');
+            }, (error) => console.error(error));
         }
-      });
+      },
+      (error) => console.error('belum ada', error));
   }
 
   componentWillUnmount() {
@@ -46,7 +42,7 @@ class Weather extends React.Component {
       if (isLoading) {
         return <LazyLoading />
       } else if (city && temp) {
-        return <WeatherInfo city={city} temp={temp} />
+        return <WeatherInfo city={city} icon={icon} desc={desc} temp={temp} />
       }
     }
 

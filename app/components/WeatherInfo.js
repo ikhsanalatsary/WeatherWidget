@@ -1,8 +1,13 @@
 import React from 'react';
+import WeatherIcon from 'WeatherIcon';
 
 const WeatherInfo = (props) => {
   return (
-    <h2>Weather in {props.city} at {props.temp}</h2>
+    <div>
+      <h2>Weather in {props.city} at {props.temp} °C</h2>
+      <WeatherIcon icon={props.icon} />
+      <h3>{props.desc}</h3>
+    </div>
   );
 }
 

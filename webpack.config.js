@@ -16,6 +16,7 @@ module.exports = {
       LazyLoading: 'app/components/LazyLoading.js',
       weatherMap: 'app/api/weatherMap.js',
       Weather: 'app/components/Weather.js',
+      WeatherIcon: 'app/components/WeatherIcon.js',
       WeatherInfo: 'app/components/WeatherInfo.js',
     },
     extentions: ['', '.js', '.jsx']
