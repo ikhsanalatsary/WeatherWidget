@@ -47,7 +47,7 @@ class Weather extends React.Component {
     }
 
     return (
-      <div>
+      <div className="weather-container">
         {WeatherLoading()}
       </div>
     );

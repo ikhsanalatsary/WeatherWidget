@@ -1,10 +1,5 @@
-html { box-sizing: border-box; }
-html *,
-html *:before,
-html *:after { box-sizing: inherit; }
-
-body {
-  max-width: 42em;
+.weather-container {
+  max-width: 30em;
   padding: 2em;
   margin: 0 auto;
   color: #161616;
@@ -13,42 +8,18 @@ body {
   background-color: currentColor;
 }
 
-h1 {
-  margin-bottom: 1.375em;
-  color: #fff;
-  font-weight: 100;
-  font-size: 2em;
-  text-transform: uppercase;
-}
-
-h2 {
+.weather-widget {
   margin-bottom: 1.375em;
   color: #fff;
   font-weight: 100;
   text-transform: uppercase;
 }
-
-h3 {
-  margin-bottom: 1.375em;
-  color: #fff;
-  font-weight: 100;
-  text-transform: uppercase;
-}
-
-p,
-a {
-  color: rgba(255,255,255,0.3);
-  font-size: small;
-}
-p { margin: 1.375rem 0; }
 
 .icon {
   position: relative;
   display: inline-block;
-  /*width: 12em;*/
-  width: auto;;
-  /*height: 10em;*/
-  height: 1.5em;
+  width: auto;
+  height: 1.2em;
   font-size: 1em; /* control icon size here */
 }
 
@@ -56,6 +27,11 @@ p { margin: 1.375rem 0; }
   color: #fff;
   font-size: 7em;
   text-align: center;
+}
+
+.cloudy, .flurries, .rainy, .sunny, .sun-shower, .thunder-storm {
+    height: 5em;
+    margin-bottom: 3em;
 }
 
 .cloud {

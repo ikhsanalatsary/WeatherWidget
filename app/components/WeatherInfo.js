@@ -4,9 +4,9 @@ import WeatherIcon from 'WeatherIcon';
 const WeatherInfo = (props) => {
   return (
     <div>
-      <h2>Weather in {props.city} at {props.temp} °C</h2>
+      <h4 className="weather-widget">Weather in {props.city}</h4>
       <WeatherIcon icon={props.icon} />
-      <h3>{props.desc}</h3>
+      <h5 className="weather-widget">at {props.temp} °C, {props.desc}</h5>
     </div>
   );
 }
