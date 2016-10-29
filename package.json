@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --bail --progress --profile --colors"
+    "webpack": "webpack --bail --progress --profile --colors",
+    "build": "webpack --bail --progress --profile --colors"
   },
   "author": "Abdul Fattah Ikhsan <ikhsannetwork@gmail.com> (http://ikhsannetwork.com/)",
   "license": "MIT",

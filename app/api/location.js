@@ -1,4 +1,4 @@
-const BASE_URL = '//gd.geobytes.com/GetCityDetails?callback=?';
+const BASE_URL = 'http://gd.geobytes.com/GetCityDetails?callback=?';
 
 export function getLocation () {
   return $
