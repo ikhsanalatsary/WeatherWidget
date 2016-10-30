@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack --bail --progress --profile --colors",
-    "build": "webpack --bail --progress --profile --colors"
+    "build": "rimraf dist && webpack --bail --progress --profile --colors"
   },
   "author": "Abdul Fattah Ikhsan <ikhsannetwork@gmail.com> (http://ikhsannetwork.com/)",
   "license": "MIT",
@@ -28,6 +28,7 @@
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.9.0",
     "html-webpack-plugin": "2.22.0",
+    "rimraf": "2.5.4",
     "style-loader": "0.13.1",
     "webpack": "1.13.2"
   },

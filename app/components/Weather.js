@@ -15,7 +15,7 @@ class Weather extends React.Component {
   componentDidMount() {
     getLocation()
       .then((data)=> {
-        var location = data.geobytescity;
+        let location = data.city;
         if(location) {
           this.serverReq = getWeather(location)
             .then((data) => {

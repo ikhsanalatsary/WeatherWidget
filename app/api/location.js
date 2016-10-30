@@ -1,9 +1,13 @@
-const BASE_URL = 'http://gd.geobytes.com/GetCityDetails?callback=?';
+const BASE_URL = 'http://ipinfo.io';
+
+import axios from 'axios';
 
 export function getLocation () {
-  return $
-    .getJSON(BASE_URL)
-    .then((data) => {
-      return data;
+  return axios
+    .get(BASE_URL)
+    .then(res => {
+      return res.data
+    }, (err) => {
+      throw new Error(err);
     });
 }
