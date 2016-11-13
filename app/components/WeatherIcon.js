@@ -16,7 +16,12 @@ const WeatherIcon = ({ icon }) => {
       break;
     case '02d':
       iconComponent = (
-        <i className="icon wi wi-day-cloudy"></i>
+        <div className="icon sun-cloudy">
+          <div className="cloud"></div>
+          <div className="sun">
+            <div className="rays"></div>
+          </div>
+        </div>
       );
       break;
     case '03d':
@@ -29,7 +34,11 @@ const WeatherIcon = ({ icon }) => {
       break;
     case '04d':
       iconComponent = (
-        <i className="icon wi wi-day-cloudy-high"></i>
+        <div className="icon broken-cloudy">
+          <div className="cloud"></div>
+          <div className="cloud"></div>
+          <div className="cloud"></div>
+        </div>
       );
       break;
     case '09d':
@@ -80,12 +89,21 @@ const WeatherIcon = ({ icon }) => {
       break;
     case '01n':
       iconComponent = (
-        <i className="icon wi wi-night-clear"></i>
+        <div className="icon moony">
+          <div className="moon">
+            <div className="stars"></div>
+          </div>
+        </div>
       );
       break;
     case '02n':
       iconComponent = (
-        <i className="icon wi wi-night-partly-cloudy"></i>
+        <div className="icon moon-cloudy">
+          <div className="cloud"></div>
+          <div className="moon">
+            <div className="stars"></div>
+          </div>
+        </div>
       );
       break;
     case '03n':
@@ -98,7 +116,11 @@ const WeatherIcon = ({ icon }) => {
       break;
     case '04n':
       iconComponent = (
-        <i className="icon wi wi-night-alt-cloudy-high"></i>
+        <div className="icon broken-cloudy">
+          <div className="cloud"></div>
+          <div className="cloud"></div>
+          <div className="cloud"></div>
+        </div>
       );
       break;
     case '09n':
@@ -111,7 +133,13 @@ const WeatherIcon = ({ icon }) => {
       break;
     case '10n':
       iconComponent = (
-        <i className="icon wi wi-night-alt-rain"></i>
+        <div className="icon moon-shower">
+          <div className="cloud"></div>
+          <div className="moon">
+            <div className="stars"></div>
+          </div>
+          <div className="rain"></div>
+        </div>
       );
       break;
     case '11n':

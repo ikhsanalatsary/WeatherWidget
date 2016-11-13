@@ -19,8 +19,8 @@ module.exports = (function makeWebpackConfig() {
 
   config.output = isTest ? {} : {
     path: isProd ? path.join(__dirname, '/dist') : path.join(__dirname, '/public'),
-    filename: isProd ? '[name].[hash].js' : '[name].bundle.js',
-    chunkFilename: isProd ? '[name].[hash].js' : '[name].bundle.js',
+    filename: isProd ? '[name].min.js' : '[name].bundle.js',
+    chunkFilename: isProd ? '[name].min.js' : '[name].bundle.js',
   };
 
   if (isTest) {
