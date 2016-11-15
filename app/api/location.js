@@ -1,4 +1,4 @@
-const BASE_URL = 'http://ipinfo.io';
+const BASE_URL = 'https://freegeoip.net/json/' || 'https://ipinfo.io';
 
 import axios from 'axios';
 
