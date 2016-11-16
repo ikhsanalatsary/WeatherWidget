@@ -1,7 +1,7 @@
 {
-  "name": "react-boilerplate",
-  "version": "1.0.0",
-  "description": "Boilerplate for react",
+  "name": "WeatherWidget",
+  "version": "0.0.9",
+  "description": "Weather Widget with react",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,6 +10,10 @@
   },
   "author": "Abdul Fattah Ikhsan <ikhsannetwork@gmail.com> (http://ikhsannetwork.com/)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ikhsanalatsary/WeatherWidget.git"
+  },
   "dependencies": {
     "axios": "^0.15.2",
     "express": "4.14.0",

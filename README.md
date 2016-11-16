@@ -9,3 +9,6 @@ you can simply add these script tag in your widget(wordpress or blogspot) or bef
 
     <div id="weatherwidget"></div> <!--you can put this in any place-->
     <script src="https://tenki-uijetto.netlify.com/app.min.js"></script>
+
+### Note
+Disable your adblock plugin
