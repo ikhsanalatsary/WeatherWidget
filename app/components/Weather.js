@@ -1,7 +1,6 @@
 import React from 'react';
 import WeatherInfo from 'WeatherInfo';
-import { getLocation } from 'location';
-import { getWeather } from 'weatherMap';
+import { openWeatherMap } from 'weatherMap';
 import LazyLoading from 'LazyLoading';
 
 class Weather extends React.Component {
@@ -13,37 +12,22 @@ class Weather extends React.Component {
   }
 
   componentDidMount() {
-    getLocation()
-      .then((data)=> {
-        let location = data.city;
-        if(location) {
-          this.serverReq = getWeather(location)
-            .then((data) => {
-              this.setState({
-                city: data.name,
-                desc: data.weather[0].main,
-                icon: data.weather[0].icon,
-                temp: data.main.temp,
-                isLoading: false,
-              });
-            }, (error) => console.error(error));
-        }
-      },
-      (error) => console.error('belum ada', error));
-  }
-
-  componentWillUnmount() {
-    this.serverReq.abort();
+    openWeatherMap()
+      .then(data => {
+        this.setState({
+          city: data.name,
+          desc: data.weather[0].main,
+          icon: data.weather[0].icon,
+          temp: data.main.temp,
+          isLoading: false,
+        });
+      }, (error) => console.error(error));
   }
 
   render() {
     var { city, desc, isLoading, icon, temp } = this.state;
     const WeatherLoading = () => {
-      if (isLoading) {
-        return <LazyLoading />
-      } else if (city && temp) {
-        return <WeatherInfo city={city} icon={icon} desc={desc} temp={temp} />
-      }
+      return isLoading ? <LazyLoading /> : <WeatherInfo city={city} icon={icon} desc={desc} temp={temp} />
     }
 
     return (
